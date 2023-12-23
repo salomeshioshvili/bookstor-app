@@ -1,13 +1,153 @@
-.container{
-    background-color: brown;
-    height: 150px;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in;
+  z-index: 1000; /* Adjust as needed */
+}
+
+.sticky {
+  background-color: #90cdf4;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a90e2;
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+
+.FaBlog {
+  display: inline-block;
+}
+
+.navitems {
+  display: none;
+  margin-left: 3rem;
+  list-style: none; /* Remove default list style */
+  padding-left: 0; /* Remove default padding */
+}
+
+.navitems > * + * {
+  margin-left: 3rem;
+}
+
+.link {
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: black;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #007bff;
+}
+
+/* Buttons */
+.buttonContainer {
+  display: none;
+}
+
+.buttonContainer > * + * {
+  margin-left: 3rem;
+}
+
+.button {
+  width: 5rem; 
+  transition: color 0.3s;
+  color: inherit;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #1d4ed8;
+}
+
+/* Menu */
+.menu,
+.menu:focus,
+.menuphone,
+.menuanotherphone {
+  color: #000;
+  outline: none;
+}
+
+.menu {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.menuanotherphone {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+/* Media Queries */
+@media (min-width: 1024px) {
+  .container {
+    padding: 1rem 6rem;
+  }
+
+  .buttonContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .button {
+    width: auto; /* Adjust size */
+  }
 }
 
-.links{
+.menuLinksContainer {
+  display: none; 
+  padding: 0; 
+  list-style: none;
+  background-color: #007bff;
+}
+
+.menuLinksContainer ul {
+  margin: 0; 
+}
+
+.menuLinksContainer li {
+  margin-bottom: 10px;
+}
+
+.menuOpen {
+  display: block;
+}
+
+.menulinks{
+  border: #000;
+}
+
+@media (min-width: 768px) {
+  .navitems {
     display: flex;
-    gap: 20px;
-    align-items: center;
+  }
+
+  .anotherbutton {
+    display: none;
+  }
 }
