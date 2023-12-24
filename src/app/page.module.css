@@ -1,0 +1,94 @@
+.bannerContainer {
+  background-color: #D1FAE5;
+  padding: 0 1rem; 
+  display: flex;
+  align-items: center;
+}
+
+.bannerContent {
+  display: flex;
+  gap: 10rem; 
+  align-items: baseline;
+}
+
+.bannerRight {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bannerLeft {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; 
+  background-color: #D1FAE5; 
+  margin-left: 80px;
+}
+
+.bannerTitle {
+  font-size: 3rem; 
+  font-weight: bold; 
+  color: #000; 
+  margin-bottom: 1rem; 
+  line-height: 1.2; 
+}
+
+.bannerHighlight {
+  color: #1D4ED8;
+}
+
+.bannerText {
+  color: #000; 
+}
+
+.bannerSearch {
+  display: flex;
+}
+
+.bannerInput {
+  padding: 0.5rem 1rem; 
+}
+
+.bannerButton {
+  background-color: #1D4ED8;
+  padding: 0.5rem 1rem; 
+  color: #fff;
+  font-weight: bold; 
+  transition: all 0.2s ease-in;
+}
+
+.bannerButton:hover {
+  background-color: #000; 
+}
+
+
+@media (max-width: 767px) {
+  .bannerContent {
+    gap: 5rem; 
+  }
+
+  .bannerRight,
+  .bannerLeft {
+    width: 100%;
+  }
+
+  .bannerLeft {
+    gap: 1rem; 
+    margin-left: 0;
+    padding: 0 1rem; 
+  }
+
+  .bannerTitle {
+    font-size: 2rem; 
+    margin-bottom: 0.5rem; 
+  }
+
+  .bannerHighlight {
+    font-size: 1.8rem;
+  }
+
+  .bannerButton {
+    padding: 0.5rem 2rem; 
+  }
+}
