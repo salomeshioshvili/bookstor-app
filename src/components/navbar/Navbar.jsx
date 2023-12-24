@@ -55,6 +55,29 @@ function Navbar() {
     },
   ];
 
+  const menuLinks = [
+    {
+      id: 1,
+      title: 'Our group',
+      url: '/our group',
+    },
+    {
+      id: 2,
+      title: 'Services',
+      url: '/services',
+    },
+    {
+      id: 3,
+      title: 'Contact',
+      url: '/contact',
+    },
+    {
+      id: 4,
+      title: 'News',
+      url: '/news',
+    },
+  ];
+
   return (
     <div className={styles.header}>
       <div className={`${styles.container} ${isSticky ? styles.sticky : ''}`}>
@@ -85,16 +108,16 @@ function Navbar() {
         </button>
       </div>
       <div className={`${styles.menuLinksContainer} ${isMenuOpen ? styles.menuOpen : ''}`}>
-        {/* Display links if isMenuOpen is true */}
-        <ul className={styles.menuLinks}>
-          {links.map((link) => (
-            <li key={link.id}>
-              <Link href={link.url} className={styles.link}>
-                {link.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      {/* Display links if isMenuOpen is true */}
+      <ul className={styles.menuLinks}>
+        {menuLinks.map((menuLink) => (
+          <li key={menuLink.id}>
+            <Link href={menuLink.url} className={styles.link}>
+             {menuLink.title}
+           </Link>
+         </li>
+      ))}
+     </ul>
       </div>
     </div>
   );
