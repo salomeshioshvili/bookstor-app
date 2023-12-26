@@ -4,7 +4,6 @@ import FictionBooks from '@/components/fictionBooks/FictionBooks';
 import FavoriteBook from '@/components/favoriteBook/FavoriteBook';
 import PromoBanner from '@/components/promoBanner/PromoBanner';
 
-
 const Home = () => {
  return (
    <div>
