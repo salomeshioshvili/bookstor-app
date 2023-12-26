@@ -11,11 +11,12 @@ function BannerCard() {
   return (
     <div className={styles.swiperContainer}>
       <Swiper effect="cards" grabCursor={true} modules={[EffectCards]} className={styles.mySwiper}>
-        {[...Array(9)].map((_, index) => (
-          <SwiperSlide key={index} className={styles.swiperSlide}>
-            Slide {index + 1}
-          </SwiperSlide>
-        ))}
+        <SwiperSlide className={styles.swiperSlide} style={{ backgroundImage: "url('/DivineRivals.jpeg')" }}></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide} style={{ backgroundImage: "url('/study.jpeg')" }}></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide} style={{ backgroundImage: "url('/Once.jpeg')" }}></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide} style={{ backgroundImage: "url('/God.jpeg')" }}></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide} style={{ backgroundImage: "url('/Sorcery.jpeg')" }}></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide} style={{ backgroundImage: "url('/ignite.jpeg')" }}></SwiperSlide>
       </Swiper>
     </div>
   );
