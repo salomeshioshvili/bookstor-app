@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './navbar.module.css';
 import Link from 'next/link';
-import { FaBlog, FaBarsStaggered, FaXmark } from 'react-icons/fa6'; // Assuming FaXmark is imported from 'react-icons/fa6'
+import { FaBlog, FaBarsStaggered, FaXmark } from 'react-icons/fa6'; 
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
