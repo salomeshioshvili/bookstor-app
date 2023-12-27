@@ -5,17 +5,17 @@ import Link from 'next/link';
 import { FaCartShopping } from 'react-icons/fa6';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import styles from './fictionBooks.module.css';
+import styles from './otherBooks.module.css';
 import { Pagination } from 'swiper/modules';
 
-const FictionBooks = () => {
+const OtherBooks = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
     const fetchBooks = async () => {
       try {
         const response = await fetch(
-          'https://openlibrary.org/subjects/fiction.json?limit=50'
+          'https://openlibrary.org/subjects/teenage_fiction.json?limit=50'
         );
 
         if (!response.ok) {
@@ -29,7 +29,7 @@ const FictionBooks = () => {
           author: work.authors ? work.authors.map(author => author.name).join(', ') : 'Unknown Author',
           imageURL: `https://covers.openlibrary.org/b/olid/${work.cover_edition_key}-M.jpg`
         }));
-        const slicedBooks = formattedBooks.slice(2, 10);
+        const slicedBooks = formattedBooks.slice(0, 7);
         setBooks(slicedBooks || []);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -42,7 +42,7 @@ const FictionBooks = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>
-        Fiction Books
+        Other Books
       </h2>
 
       <div className={styles.cardContainer}>
@@ -89,4 +89,4 @@ const FictionBooks = () => {
   );
 };
 
-export default FictionBooks;
+export default OtherBooks;
