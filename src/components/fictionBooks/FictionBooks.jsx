@@ -62,7 +62,7 @@ const FictionBooks = () => {
             <SwiperSlide className={styles.slide} key={book.id}>
                 <div className={styles.link}>
                   <div className={styles.bookContainer}>
-                  <Link href={"/blog"} ><img src={book.imageURL} alt="" className={styles.bookImage} /> </Link>
+                  <Link href={"/shop"} ><img src={book.imageURL} alt="" className={styles.bookImage} /> </Link>
 
                     <div className={styles.cartContainer}>
                       <FaCartShopping  className={styles.cartIcon}/>

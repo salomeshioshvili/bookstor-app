@@ -1,0 +1,78 @@
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  background-color: #f0f0f0;
+}
+
+.LoadingText {
+  font-size: 20px; 
+  color: #333;
+  border: 2px solid #ccc; 
+  padding: 20px;
+  border-radius: 8px; 
+}
+
+.MainContainer {
+  margin-top: 90px;
+  padding: 0 4px;
+}
+
+.MainHeading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+  z-index: 40;
+}
+
+.GridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+.BookCard {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.BookImage {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.BookTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.BookDescription {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.BuyButton {
+  padding: 8px 16px;
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.BuyButton:hover {
+  background-color: #0052cc;
+}
+
