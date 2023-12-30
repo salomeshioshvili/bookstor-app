@@ -4,7 +4,7 @@ import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
 
 const Footer = () => {
   const sections = [
-    { title: 'Bookstore', links: ['About', 'Careers', 'Shop', 'Blog'] },
+    { title: 'Bookstore', links: ['About', 'Join our group', 'Shop', 'Blog'] },
     { title: 'Help Center', links: ['Instagram', 'Twitter', 'Facebook', 'Contact Us'] },
   ];
 
