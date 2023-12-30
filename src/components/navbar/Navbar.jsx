@@ -46,7 +46,7 @@ function Navbar() {
     {
       id: 4,
       title: 'Sell your book',
-      url: '/admin',
+      url: '/sellyourbook',
     },
     {
       id: 5,
@@ -58,13 +58,13 @@ function Navbar() {
   const menuLinks = [
     {
       id: 1,
-      title: 'Our group',
-      url: '/our group',
+      title: 'Join our group',
+      url: '/joinourgroup',
     },
     {
       id: 2,
-      title: 'Services',
-      url: '/services',
+      title: 'Deals',
+      url: '/deals',
     },
     {
       id: 3,
@@ -75,6 +75,11 @@ function Navbar() {
       id: 4,
       title: 'News',
       url: '/news',
+    },
+    {
+      id: 5,
+      title: 'Log in to Your Account',
+      url: '/dashboard',
     },
   ];
 

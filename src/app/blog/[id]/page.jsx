@@ -1,6 +1,7 @@
+"use client";
 import React from 'react';
-import Link from "next/link";
-import styles from "./page.module.css"
+import { useRouter } from 'next/navigation';
+import styles from './page.module.css';
 
 const posts = [
   {
@@ -73,68 +74,22 @@ const posts = [
   },
 ];
 
-const Blog = () => {
-  const loading = false; 
-
-  if (loading) {
-    return (
-      <div className={styles.loaderContainer}>
-        <div className={styles.spinner}>
-          Loading...
-        </div>
-      </div>
-    );
+const PostPage = () => {
+  const router = useRouter();
+  const postId = router.query?.postId; 
+  
+  if (!postId || !posts.some((p) => String(p.id) === postId)) {
+    return <div className={styles.Loading}>Loading...</div>;
   }
 
+  const post = posts.find((p) => String(p.id) === postId);
+
   return (
-    <div className={styles.bookstoreContainer}>
-      <div className={styles.bookstoreContent}>
-        <h2 className={styles.bookstoreTitle}>Bookstore Blog</h2>
-        <p className={styles.bookstoreDescription}>
-          Explore our collection of books and enrich your reading experience!
-        </p>
-      </div>
-      <div className={styles.bookGrid}>
-        {posts.map((post) => (
-          <Link key={post.id} href={`/blog/${post.id}`} passHref>
-            <div className={styles.book}>
-              <div className={styles.bookMeta}>
-                <time dateTime={post.datetime} className={styles.bookDate}>
-                  {post.date}
-                </time>
-                <Link href={post.category.href} className={styles.bookCategory}>
-                  {post.category.title}
-                </Link>
-              </div>
-              <div className={styles.bookContent}>
-                <h3 className={styles.bookTitle}>
-                  <Link href={post.href}>
-                    {post.title}
-                  </Link>
-                </h3>
-                <p className={styles.bookDescription}>{post.description}</p>
-              </div>
-              <div className={styles.authorInfo}>
-                <img
-                  src={post.author.imageUrl}
-                  alt=""
-                  className={styles.authorImage}
-                />
-                <div className={styles.authorDetails}>
-                  <p className={styles.authorName}>
-                    <Link href={post.author.href}>
-                      {post.author.name}
-                    </Link>
-                  </p>
-                  <p className={styles.authorRole}>{post.author.role}</p>
-                </div>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
+    <div className={styles.postContainer}>
+      <h1 className={styles.postTitle}>{post.title}</h1>
+      <p className={styles.postDescription}>{post.description}</p>
     </div>
   );
 };
 
-export default Blog;
+export default PostPage;

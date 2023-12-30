@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from 'flowbite-react';
 import styles from './page.module.css'; 
+import Link from 'next/link';
 
 export default function Shop() {
   const [loading, setLoading] = useState(true);
@@ -20,7 +21,7 @@ export default function Shop() {
         const extractedBooks = bookData.map(book => ({
           id: book?.key,
           title: book?.title,
-          imageURL: `http://covers.openlibrary.org/b/id/${book?.cover_id}-L.jpg`, // Construct the image URL
+          imageURL: `http://covers.openlibrary.org/b/id/${book?.cover_id}-L.jpg`, 
         }));
 
         setBooks(extractedBooks);
@@ -51,7 +52,9 @@ export default function Shop() {
             <p className={styles.BookDescription}>
               Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order....
             </p>
+            <Link href="/dashboard">
             <button className={styles.BuyButton}>Buy Now</button>
+            </Link>
           </Card>
         ))}
       </div>
