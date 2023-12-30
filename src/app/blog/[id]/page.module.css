@@ -1,0 +1,31 @@
+.Loading{
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 20px auto;
+  width: fit-content;
+  margin-top: 250px;
+}
+
+.postContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.postTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.postDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}

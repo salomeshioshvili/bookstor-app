@@ -1,0 +1,91 @@
+.aboutContainer {
+  margin: 0 auto;
+  padding: 60px;
+  text-align: center;
+  background-image: linear-gradient(to bottom right, #D1FAE5, #ffdf80);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.centeredText {
+  margin-top: 60px;
+  font-size: 3em;
+  color: #3b5998;
+  padding: 30px 60px;
+  display: inline-block;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 10px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.leftContent {
+  flex: 1;
+  text-align: left;
+  color: #88b7d5; 
+  padding-right: 100px;
+  margin-left: 20px;
+}
+
+.leftContent h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #7ad97a; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.leftContent p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.rightContent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.rightContent img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: rotate(2deg);
+}
+
+.directorQuote,
+.mission {
+  text-align: left;
+  margin-bottom: 60px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: #FEF9E7;
+}
+
+.directorQuote h2,
+.mission h2 {
+  font-size: 2.5em;
+  color: #ffd700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.directorQuote p,
+.mission p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #3b5998; 
+}

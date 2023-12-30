@@ -1,0 +1,82 @@
+.joinContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.joinTitle {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.joinDescription {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.joinForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputField {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.joinButton {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.joinButton:hover {
+  background-color: #0056b3;
+}
+
+.applicantList {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.applicantList li {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.applicantList li button {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.applicantList li button:hover {
+  background-color: #c82333;
+}
